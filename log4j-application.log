@@ -1,0 +1,22 @@
+2018-04-28 14:50:24 ERROR Runner:28 - there is some error :org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.FileNotFoundException: C:\backup.sql (Access is denied)"; SQL statement:
+SCRIPT  TO 'C:/backup.sql'  [90028-195]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convertIOException(DbException.java:328)
+	at org.h2.command.dml.ScriptBase.openOutput(ScriptBase.java:146)
+	at org.h2.command.dml.ScriptCommand.query(ScriptCommand.java:159)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:113)
+	at org.h2.command.Command.executeQuery(Command.java:201)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:329)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:158)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.io.FileNotFoundException: C:\backup.sql (Access is denied)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(Unknown Source)
+	at java.base/java.io.FileOutputStream.<init>(Unknown Source)
+	at java.base/java.io.FileOutputStream.<init>(Unknown Source)
+	at org.h2.store.fs.FilePathDisk.newOutputStream(FilePathDisk.java:290)
+	at org.h2.store.fs.FileUtils.newOutputStream(FileUtils.java:233)
+	at org.h2.command.dml.ScriptBase.openOutput(ScriptBase.java:144)
+	... 6 more
+
